@@ -837,7 +837,8 @@ noscript {
 .cta:hover span,
 .text,
 .tooltip {
-    color: #fff
+    color: #fff;
+    font-weight: normal;
 }
 
 .resume-btn,
