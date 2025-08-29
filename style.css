@@ -880,8 +880,8 @@ noscript {
 .resume-btn {
     margin-top: 25px;
     justify-content: flex-start;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -912,7 +912,7 @@ noscript {
 }
 
 .sign svg {
-    width: 17px
+    width: 22px;
 }
 
 .text {
