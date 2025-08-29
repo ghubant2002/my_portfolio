@@ -916,7 +916,7 @@ noscript {
 }
 
 .text {
-    right: 14px;
+    right: 12px;
     width: 0%;
     opacity: 0;
     font-size: 1.3em;
@@ -927,22 +927,23 @@ noscript {
 }
 
 .resume-btn:hover {
-    width: 226px;
+    width: 175px;
     border-radius: 40px;
+    padding-left: 10px;
     transition-duration: all 1.5s ease;
 }
 
 .resume-btn:hover .sign {
     width: 30%;
     transition-duration: .3s;
-    /* padding-left: 20px; */
+    /* padding-left: 10px; */
 }
 
 .resume-btn:hover .text {
     opacity: 1;
     width: 70%;
     transition-duration: .3s;
-    padding-right: 10px
+    /* padding-right: 10px; */
 }
 
 .dp,
