@@ -366,7 +366,8 @@ noscript {
     justify-content: space-between;
     z-index: 999;
     border: 1px solid var(--color-navbarBorder-dark);
-    border-radius: 50px
+    border-radius: 50px;
+    overflow: visible
 }
 
 .navbar-tabs,
@@ -392,6 +393,7 @@ noscript {
     list-style: none;
     justify-content: flex-end;
     gap: 80px;
+    padding-right: 32px;
     color: var(--color-white)
 }
 
@@ -416,6 +418,145 @@ noscript {
     font-weight: 100;
     font-size: 18px;
     letter-spacing: 0.5px;
+}
+
+.portfolio-nav-item {
+    position: relative
+}
+
+.portfolio-nav-item::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -18px;
+    right: -18px;
+    height: 18px
+}
+
+.portfolio-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px
+}
+
+.portfolio-caret {
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform .2s, border-color .2s
+}
+
+.portfolio-nav-item:hover .portfolio-caret,
+.portfolio-nav-item:focus-within .portfolio-caret,
+.portfolio-nav-item.is-open .portfolio-caret {
+    transform: rotate(225deg) translate(-2px, -1px);
+    border-color: var(--color-light-blue)
+}
+
+.portfolio-dropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    width: 270px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(17, 17, 27, .97);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-navbarBorder-dark);
+    border-radius: 8px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, .3);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 10px) scale(.98);
+    transform-origin: top center;
+    transition: opacity .2s, transform .2s, visibility .2s;
+    z-index: 1000
+}
+
+.portfolio-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: rgba(17, 17, 27, .97);
+    border-left: 1px solid var(--color-navbarBorder-dark);
+    border-top: 1px solid var(--color-navbarBorder-dark);
+    transform: translateX(-50%) rotate(45deg)
+}
+
+.portfolio-nav-item:hover .portfolio-dropdown,
+.portfolio-nav-item:focus-within .portfolio-dropdown,
+.portfolio-nav-item.is-open .portfolio-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1)
+}
+
+.portfolio-dropdown a {
+    position: relative;
+    width: 100%;
+    min-height: 58px;
+    padding: 12px 42px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    border-radius: 6px;
+    color: var(--color-white);
+    letter-spacing: 0;
+    text-align: left;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s, transform .2s
+}
+
+.portfolio-dropdown a::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-50%) rotate(-45deg);
+    opacity: .55;
+    transition: opacity .2s, transform .2s
+}
+
+.dropdown-option-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+.dropdown-option-subtitle {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2
+}
+
+.portfolio-dropdown a:hover,
+.portfolio-dropdown a:focus {
+    background-color: rgba(107, 197, 248, .12);
+    color: var(--color-light-blue);
+    outline: none;
+    transform: translateX(3px)
+}
+
+.portfolio-dropdown a:hover::after,
+.portfolio-dropdown a:focus::after {
+    opacity: 1;
+    transform: translate(3px, -50%) rotate(-45deg)
 }
 
 .logo {
@@ -1187,6 +1328,57 @@ footer {
     padding: 50px
 }
 
+.project-category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    scroll-margin-top: 130px
+}
+
+.project-category+.project-category {
+    margin-top: 25px;
+    padding-top: 60px;
+    border-top: 1px solid var(--tech-stack-box-border-color)
+}
+
+.project-category-heading {
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px
+}
+
+.project-category-kicker {
+    color: whitesmoke;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase
+}
+
+.project-category-heading h3 {
+    color: var(--color-white);
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.2
+}
+
+.project-category-heading p {
+    color: gray;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.6
+}
+
+.project-category-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+}
+
 .cta:hover:before,
 .project-box-wrapper {
     width: 100%
@@ -1885,6 +2077,23 @@ footer {
     .project-boxes-div {
         padding: 40px 0
     }
+
+    .project-category {
+        gap: 30px
+    }
+
+    .project-category+.project-category {
+        margin-top: 10px;
+        padding-top: 45px
+    }
+
+    .project-category-heading h3 {
+        font-size: 2.8rem
+    }
+
+    .project-category-heading p {
+        font-size: 1.6rem
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -1927,6 +2136,14 @@ footer {
 
     .project-box {
         height: 550px
+    }
+
+    .project-category-kicker {
+        font-size: 1.4rem
+    }
+
+    .project-category-heading h3 {
+        font-size: 2.5rem
     }
 
     .info-div {

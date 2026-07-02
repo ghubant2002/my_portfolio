@@ -102,10 +102,21 @@
             </a>
           </li>
 
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
-            <a href="#projects" aria-label="projects menu button">
+          <li class="projects navbar-tabs-li portfolio-nav-item" data-aos="fade-down" data-aos-delay="700">
+            <a href="#projects" class="portfolio-trigger" aria-label="projects menu button" aria-haspopup="true" aria-expanded="false">
               Portfolio
+              <span class="portfolio-caret" aria-hidden="true"></span>
             </a>
+            <div class="portfolio-dropdown" role="menu" aria-label="Portfolio categories">
+              <a href="#frontend-development" role="menuitem" aria-label="Navigate to frontend development projects">
+                <span class="dropdown-option-title">Frontend</span>
+                <span class="dropdown-option-subtitle">Web Development</span>
+              </a>
+              <a href="#aws-solution-architectures" role="menuitem" aria-label="Navigate to AWS solution architectures">
+                <span class="dropdown-option-title">AWS Cloud</span>
+                <span class="dropdown-option-subtitle">Solution Architectures</span>
+              </a>
+            </div>
           </li>
         </ul>
       </div>
@@ -195,40 +206,39 @@
             <p class="jello">I</p>
           </div>
           <div>
-            <p class="jello">d</p>
-            <p class="jello">e</p>
-            <p class="jello">s</p>
+            <p class="jello">b</p>
+            <p class="jello">u</p>
             <p class="jello">i</p>
-            <p class="jello">g</p>
-            <p class="jello">n</p>
-          </div>
-          <div>
-            <p class="jello">&</p>
-          </div>
-          <div>
-            <p class="jello">c</p>
-            <p class="jello">o</p>
+            <p class="jello">l</p>
             <p class="jello">d</p>
-            <p class="jello">e</p>
-          </div>
-          <div>
-            <p class="jello">f</p>
-            <p class="jello">o</p>
-            <p class="jello">r</p>
           </div>
           <div>
             <p class="jello">w</p>
             <p class="jello">e</p>
             <p class="jello">b</p>
+          </div>
+          <div>
+            <p class="jello">&</p>
+          </div>
+          <div>
+            <p class="jello">A</p>
+            <p class="jello">W</p>
+            <p class="jello">S</p>
+          </div>
+          <div>
+            <p class="jello">c</p>
+            <p class="jello">l</p>
+            <p class="jello">o</p>
+            <p class="jello">u</p>
+            <p class="jello">d</p>
             <p class="jello">.</p>
           </div>
         </article>
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Frontend developer passionate about building visually appealing, accessible, and responsive webpages.
-           I'm fluent in HTML, CSS, JavaScript and Wordpress.<br />
+          Frontend developer building responsive, accessible interfaces while learning AWS cloud.
+          I am skilled in HTML, CSS, JavaScript, WordPress, and AWS services including S3, Lambda, API Gateway, DynamoDB, CloudFront, and CI/CD.<br />
           <br />
-          My designs are focused on simple content structure, user friendly interfaces, and
-          thoughtful interactions.
+          My focus is on simple content structure, user-friendly experiences, and cloud-ready solutions that connect polished frontend work with scalable AWS architecture.
         </p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
           <a href="mailto:antarak2002@gmail.com" tabindex="-1">
@@ -273,15 +283,15 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hello, I am Antara Karmakar, a frontend developer passionate about creating modern, user interactive, & responsive websites using tools like HTML, CSS, Bootstrap, JavaScript & Wordpress.
+              Hello, I am Antara Karmakar, a frontend developer upskilling in AWS cloud. I build modern, interactive, and responsive websites.
             </p>
             <br />
             <p tabindex="0">
-              I believe good design should not only be beautiful but also intuitive. I focus on responsiveness, accessibility, and performance to ensure a seamless experience across devices and platforms.
+              I believe good design should be beautiful, intuitive, and reliable. Alongside frontend development, I build AWS projects that connect static sites with cloud services like Amazon S3, Lambda, API Gateway, DynamoDB, CloudFront, Route 53, and CI/CD pipelines.
             </p>
             <br />
             <p tabindex="0">
-              Currently, I’m expanding my skills in JavaScript and exploring modern frameworks to push the boundaries of what I can build, to grow as a developer.
+              Currently, I am expanding my AWS cloud skills through hands-on architecture projects, while continuing to strengthen performance, accessibility, and user experience.
             </p>
              <!-- Resume button -->
       <button class="resume-btn" id="resume-btn" onclick="openURL()">
@@ -353,7 +363,7 @@
 
             <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/aws.png" alt="aws skill" class="tech-stack-logo2" />
-              <span class="tooltip">Amazon Web Services</span>
+              <span class="tooltip">AWS</span>
             </li>
 
           </ul>
@@ -370,6 +380,12 @@
           <p class="sectionHeadingP"></p>
         </div>
         <div class="project-boxes-div">
+          <div class="project-category" id="frontend-development">
+            <div class="project-category-heading" data-aos="fade-up">
+              <span class="project-category-kicker">Frontend Development</span>
+              <p>Landing pages, business websites, WordPress builds, and ecommerce interfaces focused on clean UI and smooth user experiences.</p>
+            </div>
+            <div class="project-category-projects">
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -652,6 +668,15 @@
             </div>
           </div>
 
+            </div>
+          </div>
+
+          <div class="project-category aws-project-category" id="aws-solution-architectures">
+            <div class="project-category-heading" data-aos="fade-up">
+              <span class="project-category-kicker">AWS Solution Architectures</span>
+              <p>Serverless, CDN, CI/CD, compute, and event-driven AWS projects that show cloud hosting, automation, and scalable architecture work.</p>
+            </div>
+            <div class="project-category-projects">
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box4" id="project-box4">
               <div class="info-div">
@@ -796,7 +821,9 @@
               </div>
             </div>
           </div>
-          
+           
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -869,6 +896,53 @@
   <!-- footer ends here -->
 
   <script src="main.js"></script>
+
+  <script>
+    (function () {
+      const portfolioItem = document.querySelector(".portfolio-nav-item");
+      if (!portfolioItem) return;
+
+      const portfolioTrigger = portfolioItem.querySelector(".portfolio-trigger");
+      const portfolioLinks = portfolioItem.querySelectorAll(".portfolio-dropdown a");
+      let closeTimer;
+
+      function openPortfolioMenu() {
+        clearTimeout(closeTimer);
+        portfolioItem.classList.add("is-open");
+        portfolioTrigger.setAttribute("aria-expanded", "true");
+      }
+
+      function closePortfolioMenu() {
+        portfolioItem.classList.remove("is-open");
+        portfolioTrigger.setAttribute("aria-expanded", "false");
+      }
+
+      function schedulePortfolioMenuClose() {
+        clearTimeout(closeTimer);
+        closeTimer = setTimeout(closePortfolioMenu, 140);
+      }
+
+      portfolioItem.addEventListener("mouseenter", openPortfolioMenu);
+      portfolioItem.addEventListener("mouseleave", schedulePortfolioMenuClose);
+      portfolioItem.addEventListener("focusin", openPortfolioMenu);
+      portfolioItem.addEventListener("focusout", function (event) {
+        if (!portfolioItem.contains(event.relatedTarget)) {
+          closePortfolioMenu();
+        }
+      });
+
+      portfolioItem.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closePortfolioMenu();
+          portfolioTrigger.focus();
+        }
+      });
+
+      portfolioLinks.forEach(function (link) {
+        link.addEventListener("click", closePortfolioMenu);
+      });
+    })();
+  </script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
