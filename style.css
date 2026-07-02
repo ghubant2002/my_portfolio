@@ -1115,7 +1115,7 @@ noscript {
 .tech-stack-wrapper {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     margin-top: 50px
 }
 
@@ -1126,10 +1126,10 @@ noscript {
 }
 
 .tech-stack-box {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 22px;
     border: 1px solid var(--tech-stack-box-border-color);
     position: relative;
 }
@@ -1303,12 +1303,13 @@ footer {
 .cta svg {
     top: 0;
     margin-left: 10px;
+    margin-top: 2px;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke: var(--color-light-blue);
     stroke-width: 2;
-    transform: translateX(-5px);
+    transform: translateX(-4px);
     transition: .3s
 }
 
